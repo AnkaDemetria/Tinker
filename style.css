@@ -1,0 +1,433 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/************************ HEADER *********************/
+header{
+    background: url("img/banner_bg.jpg");
+    background-size: cover;
+    min-height: 635px;
+    display:grid;
+    /* REVIENT AU MEME QUE DISPLAY GRID */
+    /* display:flex;
+    justify-items: center;
+    align-items: center; */
+    place-items: center;
+}
+.bannerbas{
+    background: url("img/banner_bg.jpg");
+    width: 100%;
+    height: 40px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+} 
+
+.mobile ul{
+    display:none;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+/* position: fixed;
+background: #000000;
+mix-blend-mode: difference; */
+    position:absolute;
+    top:0;
+    width:100%;
+}
+.logo{
+    font-size: 1.6em;
+    font-weight: 800;
+}
+.logo span{
+    font-size: 1.5em;
+    color:#F6C45C;
+}
+.logo a{
+    color:#fafafa;
+    text-transform: uppercase;
+}
+
+nav a{
+    text-decoration: none;
+    color:#ffffff;
+    margin: 15px;
+    text-align: center;
+    font-size: small;
+}
+
+.mobile{
+    display:none;
+}
+
+.desktop ul li{
+    display:inline-block;
+    margin-left: 20px;
+}
+
+/* /* la condition va s appliquer en- dessous de 600px dc version desktop*/ 
+@media screen and (max-width:600px){
+    .desktop{
+        display:none;
+    }
+    .mobile{
+        display:block;
+        color:#fafafa;
+        position: relative;
+    }
+   .fa-bars{
+    color:black;
+   }
+    .mobile .burger{
+        background: #fafafa;
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        position: fixed;
+        top: 20px;
+        right:20px;
+        z-index: 9999999;
+    }
+    .mobile .menuburger {
+        background: rgba(0,0,0,0.5);
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        position:fixed;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+    .mobile div i{
+        font-size: 1.5em;
+    /* En position absolute par rapport à son parent .mobile */
+    }
+    .mobile input{
+        appearance: none;
+    }
+    .mobile input:checked ~ .menuburger{
+        height: 100vh;
+    }
+
+    .mobile input:checked ~ .burger{
+    /* Tilde ~ qui sont les enfants de mobile, qui sont frères input:checked et .burger , quand input est checked, alors condition s'applique sur menu burger*/
+        appearance: none;
+    }
+}
+
+.boxheader{
+    color:#fafafa;
+    min-width: 280px ;
+    max-width: 670px;
+    text-align: center;
+    margin:auto;
+    border-spacing: 10px;
+}
+h1 span:nth-child(1){
+    color: #3DC1CD;
+}
+h1 span:nth-child(2){
+    color:#F69536;
+}
+
+.boxheader p{
+    margin:20px
+}
+.boxheader button{
+    font-weight: bolder;
+    width:110px;
+    color: #000000;
+    font-size: small;
+    text-decoration: none;
+    text-align: center;
+    border:0px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 20px;  
+    padding: 10px;  
+}
+
+/* *********************** SECTION 1 ******************** */
+
+.icon{
+    background: url(img/about-bg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icone{
+    display: grid;
+    place-items: center;
+}
+.icone hr{
+    width: 250px;
+}
+.iimg{
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #F6C45C;
+    border-radius: 50%;
+    border: solid 2px white;
+    margin: 80px 0 20px 0;       
+}
+.icone h2{
+    color: #ffffff;
+    font-size: medium;
+    margin: 20px;
+}
+.icone p{
+    color:#fafafa;
+    font-size: smaller;
+    margin: 30px 60px;
+    word-spacing: 3px; 
+    text-align: center;
+    line-height: 20px;
+}
+.icone button{
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 60px;
+    background:#3DC1CD;
+    color: #fafafa ;
+    text-transform: uppercase;
+}
+.banneraboutus{
+    background: url(img/about-bg.jpg);
+    width: 100%;
+    height: 80px;
+}
+/* ***********************SECTION 2 ************************ */
+
+.ourgallery{
+    display: flex;
+}
+.gallery{
+    background-color: #3DC1CD;
+    color:#fafafa;
+    width: 40%;
+    padding-left: 10%;
+    padding-top: 15% ;
+}
+.gallery hr{
+    width: 300px;
+}
+.gallery h2{
+    font-size: larger;
+}
+.gallery p{
+    margin:20px 0 60px 0;
+    width: 310px;
+    line-height: 30px;
+}
+.gallery ul{
+    list-style: none;
+}
+.gallery li{
+    font-weight: bold;
+    line-height: 40px;
+}
+.gallery span{
+    color:#F6C45C;
+    font-weight: bold;
+}
+.portfolio{
+    width: 60%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+.portfolio img{
+    width: 40%;
+}
+.commentaire{
+    background-color: #F6C45C;
+    padding: 5em;
+    text-align: center;
+}
+.commentaire p:nth-child(1){
+    width: 40%;
+    margin: auto;
+    padding: 25px;
+    background-color: #fafafa;
+    font-weight: lighter;
+    font-style: italic;
+    border-radius: 5px;
+    line-height: 25px;
+}
+.commentaire p:nth-child(2){
+    padding:15px;
+    color: #fafafa;
+}
+.commentaire p:nth-child(3){
+    color: #fafafa;
+}
+.commentaire div{
+    display: flex;
+   justify-content: center;
+}
+.circle{
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    opacity: 0.5;
+    margin: 2em 0.5em 0;
+}
+.circle:last-child{
+    opacity: 1;
+}
+
+/* ************************** SECTION 3 ************************* */
+.ourblog{
+    background:url(img/blog-bg.jpg);
+    width: 100%;
+    display: flex;
+    color: #fafafa;
+}
+.blog{
+    background-color: rgba(0,0,0,0.5);
+    width: 40%;
+    padding-left: 10%;
+    /* padding-top: 10% ; */
+}
+.blog hr{
+    width: 300px;
+}
+.blog h2{
+    font-size: larger;
+    margin: 50px 0 20px;
+}
+.blog p{
+    margin:20px 0 60px 0;
+    width: 310px;
+    line-height: 30px;
+}
+.blog ul{
+    list-style: none;
+
+}
+.blog li{
+    line-height: 40px;
+    border: solid white;
+    background-color: #fafafa;
+    color: #000000;
+    text-align: center;
+    padding: auto;
+    margin-right:60px;
+    margin-bottom:30px;
+    width: 75%;
+}
+.blog span{
+    color:#F6C45C;
+}
+.photo{
+    width: 60%;
+    margin:50px;
+}
+.photo img{
+    width: 100%;
+}
+.whitebox{
+    border:white;
+    background-color: #fafafa;
+    color: #000000;
+    padding: 30px;
+    line-height: 30px;
+    widows: 100%;
+}
+.whitebox h2{
+    font-size: medium;
+}
+.whitebox h3{
+    font-size: small;
+    color: #3DC1CD;
+}
+.whitebox p{
+    font-size: smaller;
+}
+.contact{
+    background-color: rgb(100, 96, 96);
+    color: #fafafa;
+    text-align: center;
+    padding: 60px 400px;
+}
+.contact h2{
+    font-size: larger;
+    margin-bottom: 20px;
+}
+.contact p{
+    font-size: medium;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    word-spacing: 3px; 
+    line-height: 25px;
+}
+.contact button{
+    background-color: #3DC1CD;
+    border-radius: 25px;
+    border: none;
+    padding: 15px;
+    color: #fafafa;
+}
+/* ************************** SECTION 4 ****************************** */
+iframe{
+    width: 100%;
+}
+
+/* *************************** FOOTER ******************************** */
+footer{
+    background-color: rgb(100, 96, 96);
+    display: flex;
+    color:#fafafa;
+    justify-content: space-around;
+    padding:30px ;
+}
+.info .logo{
+    font-size: medium;
+}
+.info span{
+    color:#F6C45C;
+}
+.info h3{
+    font-size: small;
+}
+.social i{
+    color:#000000;
+    background-color: #fafafa;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: solid 2px white;
+}
+/* 2EME technique pour mettre un hr vertical */
+/* .location hr{
+    transform: rotate(90deg);
+} */
+.location div{
+    display: flex;
+}
+.location div p:first-child{
+    border-right: solid 1px #fafafa;
+}
+.location div p{
+    padding: 20px;
+}
+footer h3{
+    margin-bottom: 20px;
+    font-size: medium;
+}
